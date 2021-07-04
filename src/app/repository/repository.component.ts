@@ -37,22 +37,17 @@ export class RepositoryComponent implements OnInit {
   }
 
   async getBranch(branch: any) {
-    console.log(branch);
-
     let initalcommit: any = await this.getCommit(branch.commit.url);
 
     this.actual = [];
     let urls: string[] = [];
-    console.log(initalcommit);
     this.actual.push(initalcommit.author);
     this.commits.next(this.actual);
 
     await this.getAllCommits(initalcommit, urls);
     this.commits.pipe(
       map((data:any[])=> data.sort((a,b) => (new Date(a.author.date)).getTime() - (new Date(b.author.date)).getTime() ))
-    ).subscribe(console.log);
-
-    //this.commits.subscribe(console.log);
+    )
   }
 
   async getAllCommits(inital: any, urls: string[]) {
