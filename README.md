@@ -1,8 +1,8 @@
 
-![screenshot](./app/assets/images/img1.png)
-![](./app/assets/images/img2.png)
-![](./app/assets/images/img3.png)
-![](./app/assets/images/img4.png)
+![screenshot](./images/image1.png)
+![](./images/image2.png)
+![](./images/image3.png)
+![](./images/image4.png)
 
 # GitHub Commits Viewer
 > This is a web page than you can see all your repos, and commits of github
