@@ -6,6 +6,7 @@
 
 # GitHub Commits Viewer
 > This is a web page than you can see all your repos, and commits of github
+> Live preview [live](https://kiranitor123.github.io/github-commit-viewer/home).
 
 **What you can do with this project**
 - See any github profile
