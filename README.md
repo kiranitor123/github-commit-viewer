@@ -1,4 +1,9 @@
 
+![screenshot](./app/assets/images/img1.png)
+![](./app/assets/images/img2.png)
+![](./app/assets/images/img3.png)
+![](./app/assets/images/img4.png)
+
 # GitHub Commits Viewer
 > This is a web page than you can see all your repos, and commits of github
 
@@ -45,7 +50,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/kiranitor123/blog_app/issues).
+Feel free to check the [issues page](https://github.com/kiranitor123/github-commit-viewer/issues).
 
 ## Show your support
 
