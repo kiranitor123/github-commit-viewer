@@ -1,0 +1,24 @@
+.contributors{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.commits{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid;
+}
+
+.pad10{
+  padding: 10px;
+}
+
+mat-card-title {
+  justify-content: center;
+}
+
+.card-repos{
+  margin-bottom: 20px;
+}

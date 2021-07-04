@@ -1,0 +1,22 @@
+.input{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.user{
+  display: flex;
+}
+
+.image{
+  align-self: center;
+}
+
+.pad10{
+  padding: 10px;
+}
+.buscar{
+  margin-right: 10px;
+}

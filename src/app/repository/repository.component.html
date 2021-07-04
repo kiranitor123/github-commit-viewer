@@ -1,0 +1,23 @@
+<mat-card class="card-repos">
+  <mat-card-header>
+    <mat-card-title class="title">{{repo.name | uppercase}}</mat-card-title>
+    <mat-card-subtitle>{{repo.description}}</mat-card-subtitle>
+    <mat-card-subtitle>{{repo.homepage}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="contributors">
+      <app-contributors *ngFor="let contributor of (contributors|async)" [contributor]="contributor" ></app-contributors>
+    </div>
+
+    <mat-chip-list>
+      <mat-chip *ngFor="let branch of (branchs|async)" (click)="getBranch(branch)">{{branch.name}}</mat-chip>
+    </mat-chip-list>
+    <div *ngFor="let commit of (commits|async)" class="commits">
+      <p class="pad10">Author: {{commit.author.name}}</p>
+      <p class="pad10">Email: {{commit.author.email}}</p>
+      <p class="pad10">Date: {{commit.author.date}}</p>
+      <p class="pad10">Message: {{commit.message}}</p>
+    </div>
+
+  </mat-card-content>
+</mat-card>

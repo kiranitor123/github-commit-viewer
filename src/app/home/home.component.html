@@ -1,0 +1,36 @@
+<div class="input">
+  <h2>Introduzca usuario GitHub</h2>
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="kiranitor123" [(ngModel)]="user" >
+  </mat-form-field>
+  <div>
+    <button mat-raised-button color="accent" class="buscar" (click)="buscar()">Buscar</button>
+    <button mat-button color="warn" (click)="limits()">Limit?</button>
+  </div>
+  <div *ngIf="(limit |async)as limit">
+    <h2>limite: {{limit.rate.limit}}</h2>
+    <h2>usado: {{limit.rate.used}}</h2>
+  </div>
+</div>
+
+<div *ngIf="(profile |async)as perfil">
+  <div *ngIf="perfil.error">
+    <p>{{perfil.error}}</p>
+  </div>
+  <div *ngIf="!perfil.error" class="user">
+    <img [src]="perfil.avatar" height="150" [alt]="perfil.name" class="image">
+    <div class="pad10">
+      <h2>{{perfil.name}}</h2>
+      <p>{{perfil.bio}}</p>
+      <p>{{perfil.location}}</p>
+      <button mat-stroked-button color="warn" (click)="getRepos(perfil.repo)">Ver Repositorios</button>
+    </div>
+   
+  </div>
+
+  <div *ngIf="(repos | async) as reposUser">
+    <app-repository *ngFor="let repo of reposUser" [repo]="repo"></app-repository>
+  </div>
+ 
+</div>
